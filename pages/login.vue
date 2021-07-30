@@ -25,11 +25,11 @@
             </div>
 
             <!-- Forms -->
-            <form method="post" class="input-container " @submit.prevent="userLogin()">
+            <form class="input-container " @submit.prevent="userLogin()">
                 <div class="input-group">
                     <i class="icon-container uil uil-envelope"></i>
                     <input 
-                        v-model="login.email"
+                        v-model="email"
                         type="email" 
                         class="form-control" 
                         placeholder="Email"
@@ -38,55 +38,50 @@
                 <div class="input-group">
                     <i class="icon-container uil uil-lock"></i>
                     <input 
-                        v-model="login.password"
+                        v-model="password"
                         type="password" 
                         class="form-control" 
                         placeholder="Password"
                     />
                 </div>
                 <nuxt-link class="forgot-button" to="/forgot">Forgot password?</nuxt-link>
-                <button type="submit" class="btn btn-login">LOGIN</button>
+                <button @click="onClick" type="submit" class="btn btn-login">LOGIN</button>
             </form>
             <p class="p-register">Don't have an account? <nuxt-link class="btn-register" to="/register"> Register</nuxt-link></p>
         </div>
     </div>
 </template>
 
-// <script>
-// export default {
-//     data() {
-//         return { 
-//             login: {
-//                 email: '',
-//                 password: ''
-//             },
+<script>
+export default {
+    name: 'Login',
+    components: { },
+    data() {
+        return {
+            email: '',
+            password: ''
+        }
+    },
 
-//             errors: null
-//         }
-//     },
-
-//     methods: {
-//         userLogin() {
-//             axios.post('https://gatelab.thuderlab.id/', {
-//                 email: '',
-//                 password: ''
-//             },
-//             {
-//                 headers: {
-//                     'X-Requested-With': 'XMLHttpRequest',
-//                     'Content-Type': 'application/json'
-//                 }
-//             })
-//             .then(res => {
-//                 console.lof(res)
-//             })
-//             . catch (e =>  {
-//                 this.errors = e.response.data.errors
-//             })
-//         }
-//     }
-// }
-// </script>
+    methods: {
+        userLogin() {
+        const formLogin = {
+            email: this.email,
+            password: this.password,
+        }
+        this.$axios
+            .post('https://oryx.thunderlab.id/account/login', formLogin)
+            .then((res) => {
+                console.log(res)
+                this.$router.push('/beranda')
+            })
+            .catch((err) => {
+                this.errors = err.response.data.errors
+            })
+        }
+    }
+}
+</script>
 
 <style scoped>
     svg.arrow-icon {
