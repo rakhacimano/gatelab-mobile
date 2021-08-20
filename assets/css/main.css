@@ -1,0 +1,133 @@
+@import url('assets/css/background.css');
+
+:root {
+  /* Color */
+  --primary-color: #fca311;
+  --secondary-color: #14213d;
+  --text-color: #96928e;
+  --white-color: #ffffff;
+  --danger-color: #ff4040;
+  --active-color: #1199fc;
+  --success-color: #23d420;
+
+  /* Margin */
+  --m-xl: 2rem;
+  --m-lg: 1rem;
+  --m-xs: 0.25rem;
+  --m-sm: 0.5rem;
+}
+
+/* Mobile Section */
+.section-all {
+  height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 500px;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  box-shadow: 0.1px 0.1px 32px 8px rgba(20, 33, 61, 0.08);
+}
+
+/* Setting for Width the Container */
+.width-88 {
+  width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Reset Default Margin */
+p,
+h1 {
+  margin: 0;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1.headline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: var(--m-xs);
+}
+
+p.sub-headline {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.btn-filled,
+.btn-outline {
+  width: 100%;
+  height: 3rem;
+  border-radius: 1rem;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: .5px solid var(--secondary-color);
+}
+
+.input-group {
+  margin-bottom: 1rem;  
+}
+
+.input-container {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-control, 
+.form-control:focus {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  border: .5px solid var(--text-color);
+  border-radius: 1rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  color: var(--white-color);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--text-color);
+}
+
+form.form-input {
+  margin-top: var(--m-xl);
+}
+
+i.uil-arrow-left {
+  color: var(--secondary-color);
+}
+
+/* Tablet Section */
+@media (min-width: 501px) and (max-width: 1365px) {
+  .section-tablet {
+    min-width: 100%;
+    background-color: var(--white-color);
+  }
+}
+
+/* Laptop Section */
+@media screen and (min-width: 1366px) {
+  .section-desktop {
+    width: 28%;
+    background-color: var(--white-color);
+  }
+}
