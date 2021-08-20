@@ -1,7 +1,7 @@
 <template>
   <div class="kontainer">
     <!-- Kontainer Top Bar Position Sticky -->
-    <div class="kontainer__top-bar sticky-top pt-4">
+    <div class="kontainer__top-bar sticky-top pt-4 pb-2 bg-white">
       <!-- Top Bar -->
       <div
         class="
@@ -207,9 +207,6 @@ a {
   color: #14213d;
 }
 
-.kontainer__top-bar {
-  background-color: white;
-}
 
 i.uil-lock,
 i.uil-user {
