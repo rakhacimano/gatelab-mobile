@@ -191,7 +191,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'bottom-bar',
+}
 </script>
 
 <style scoped>
@@ -212,6 +214,10 @@ a {
 i.uil-lock,
 i.uil-user {
   color: #fca311;
+}
+
+.kontainer {
+  margin-bottom: 10rem;
 }
 
 </style>
