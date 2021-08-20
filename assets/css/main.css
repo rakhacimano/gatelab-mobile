@@ -54,10 +54,16 @@ h1.headline {
   margin-bottom: var(--m-xs);
 }
 
-p.sub-headline {
+p.sub-headline, 
+p.semibold {
   font-size: 1rem;
   font-weight: 400;
   color: var(--text-color);
+}
+
+p.semibold {
+  font-weight: 600;
+  color: var(--secondary-color);
 }
 
 .btn-filled,
@@ -75,6 +81,19 @@ p.sub-headline {
 .btn-outline {
   background-color: transparent;
   border: .5px solid var(--secondary-color);
+}
+
+.btn-outline.lock,
+.btn-outline.unlock {
+  width: 3rem;
+  padding: 0 1rem;
+  color: var(--success-color);
+  border: 0.5px solid var(--success-color);
+}
+
+.btn-outline.unlock {
+  color: var(--danger-color);
+  border: 0.5px solid var(--danger-color);
 }
 
 .input-group {
