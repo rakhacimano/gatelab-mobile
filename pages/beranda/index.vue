@@ -72,7 +72,7 @@
         <div class="button-container d-flex mt-3">
           <nuxt-link
             class="btn-outline d-flex justify-content-center align-items-center"
-            to="/detail-pintu"
+            to="/beranda/detail-pintu"
           >
             Detail
           </nuxt-link>
@@ -107,7 +107,7 @@
         <div class="button-container d-flex mt-3">
           <nuxt-link
             class="btn-outline d-flex justify-content-center align-items-center"
-            to="/detail-pintu"
+            to="/beranda/detail-pintu"
           >
             Detail
           </nuxt-link>
@@ -142,7 +142,7 @@
         <div class="button-container d-flex mt-3">
           <nuxt-link
             class="btn-outline d-flex justify-content-center align-items-center"
-            to="/detail-pintu"
+            to="/beranda/detail-pintu"
           >
             Detail
           </nuxt-link>
@@ -177,7 +177,7 @@
         <div class="button-container d-flex mt-3">
           <nuxt-link
             class="btn-outline d-flex justify-content-center align-items-center"
-            to="/detail-pintu"
+            to="/beranda/detail-pintu"
           >
             Detail
           </nuxt-link>
