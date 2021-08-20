@@ -39,7 +39,7 @@
         </div>
         <div class="button-tambah">
           <nuxt-link to="tambah-pintu">
-            <button class="btn-outline pl-3 pr-3">Tambah</button>
+            <button class="btn-outline pl-4 pr-4">Tambah</button>
           </nuxt-link>
         </div>
       </div>
