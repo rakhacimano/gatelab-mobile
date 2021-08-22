@@ -65,7 +65,7 @@
         <p class="sub-headline">Daftar hak akses pintu</p>
       </div>
       <div class="button-tambah">
-        <nuxt-link to="tambah-pintu">
+        <nuxt-link to="tambah-akses">
           <button class="btn-outline pl-4 pr-4">Tambah</button>
         </nuxt-link>
       </div>
