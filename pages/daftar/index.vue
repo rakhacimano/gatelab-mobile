@@ -23,7 +23,7 @@
     </div>
 
     <!-- Form Inputan -->
-    <form class="form-input" @submit.prevent="">
+    <form class="form-input" @submit.prevent="daftarUser()">
       <div class="input-group">
         <i class="icon-container uil uil-envelope"></i>
         <input
@@ -68,7 +68,27 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    daftarUser() {
+      const formRegister = {
+        email: this.email,
+        password: this.password,
+        password_confirmation: this.password_confirmation,
+      }
+      this.$axios
+      .post('https://gatelab.thunderlab.id/register', formRegister)
+      .then((res) => {
+        console.log(res)
+        this.$router.push('/masuk')
+      })
+
+      .catch((err) => {
+        this.errors = err.response.data.errors
+      })
+    },
+  },
+}
 </script>
 
 <style scoped>
