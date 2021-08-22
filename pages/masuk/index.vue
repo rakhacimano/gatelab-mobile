@@ -23,7 +23,7 @@
     </div>
 
     <!-- Form Inputan -->
-    <form class="form-input" @submit.prevent="">
+    <form class="form-input" @submit.prevent="masukUser()">
       <div class="input-group">
         <i class="icon-container uil uil-envelope"></i>
         <input
@@ -59,7 +59,25 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    masukUser() {
+      const formLogin = {
+        email: this.email,
+        password: this.password,
+      }
+      this.$axios
+      .post('https://gatelab.thunderlab.id/login', formLogin)
+      .then((res) => {
+        console.log(res)
+        this.$router.push('/beranda')
+      })
+      .catch((err) => {
+        this.errors = err.response.data.errors
+      })
+    },
+  },
+}
 </script>
 
 <style scoped>
