@@ -144,10 +144,6 @@ export default {}
 </script>
 
 <style scoped>
-i.uil-arrow-left {
-  font-size: 2rem;
-}
-
 .logo-pintu__svg {
   width: 6rem;
 }

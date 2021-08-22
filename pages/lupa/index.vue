@@ -34,7 +34,7 @@
           required
         />
       </div>
-      <button class="btn-filled">Masuk</button>
+      <button class="btn-filled mt-3">Masuk</button>
     </form>
 
   </div>
@@ -45,15 +45,7 @@ export default {}
 </script>
 
 <style scoped>
-i.uil-arrow-left {
-  font-size: 2rem;
-}
-
 .headline__sub-headline {
   margin-top: 2rem;
-}
-
-button.btn-filled {
-  margin-top: 1rem;
 }
 </style>

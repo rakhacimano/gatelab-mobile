@@ -38,7 +38,7 @@
           <p class="sub-headline">Yuk, lihat pintumu!</p>
         </div>
         <div class="button-tambah">
-          <nuxt-link to="tambah-pintu">
+          <nuxt-link to="/beranda/tambah-pintu">
             <button class="btn-outline pl-4 pr-4">Tambah</button>
           </nuxt-link>
         </div>

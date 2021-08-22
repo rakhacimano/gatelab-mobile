@@ -133,6 +133,7 @@ form.form-input {
 
 i.uil-arrow-left {
   color: var(--secondary-color);
+  font-size: 2rem;
 }
 
 /* Tablet Section */
