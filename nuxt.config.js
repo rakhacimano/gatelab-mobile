@@ -24,8 +24,7 @@ export default {
         href: 'https://fonts.googleapis.com/css?family=Space+Grotesk:400,500,600',
       },
       {
-        rel: 'stylesheet',
-        href: 'https://unicons.iconscout.com/release/v4.0.0/css/line.css',
+        rel: 'stylesheet', href: 'https://unicons.iconscout.com/release/v4.0.0/css/line.css',
       },
     ],
   },

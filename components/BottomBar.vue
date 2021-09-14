@@ -4,6 +4,10 @@
       <i class="uil uil-estate"></i>
       <p>Home</p>
     </Nuxt-Link>
+    <Nuxt-Link to="/berita" class="nav_link">
+      <i class="uil uil-plus-circle"></i>
+      <p>Profile</p>
+    </Nuxt-Link>
     <Nuxt-Link to="/profil" class="nav_link">
       <i class="uil uil-user"></i>
       <p>Profile</p>

@@ -17,10 +17,11 @@
       </div>
 
       <!-- Form Inputan -->
-      <form class="form-input" @submit.prevent="">
+      <form class="form-input" @submit.prevent="tambahPintu">
         <div class="input-group">
           <i class="icon-container uil uil-archway"></i>
           <input
+            v-model="title"
             type="text"
             class="form-control"
             placeholder="Nama Pintu"
@@ -30,7 +31,8 @@
         <div class="input-group">
           <i class="icon-container uil uil-location-pin-alt"></i>
           <input
-            type="email"
+            v-model="location"
+            type="text"
             class="form-control"
             placeholder="Lokasi"
             required
@@ -39,7 +41,8 @@
         <div class="input-group">
           <i class="icon-container uil uil-link"></i>
           <input
-            type="url"
+            v-model="link_device"
+            type="text"
             class="form-control"
             placeholder="Tautan Pintu"
             required
@@ -51,6 +54,7 @@
         <div class="input-group">
           <i class="icon-container uil uil-envelope"></i>
           <input
+            v-model="email"
             type="email"
             class="form-control"
             placeholder="Email"
@@ -63,6 +67,32 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    async tambahPintu() {
+      const formTambahPintu = {
+        title: this.title,
+        location: this.location,
+        link_device: this.link_device,
+        email: this.email,
+      }
+
+      await this.$axios
+        .post('/addDoor', formTambahPintu)
+        .then((res) => {
+          console.log(res)
+          this.$router.push('/beranda')
+        })
+
+        .catch((err) => {
+          this.errors = err.response.data.errors
+        })
+    },
+  },
+}
+</script>
 
 <style scoped>
 .headline__sub-headline {

@@ -61,13 +61,13 @@
 <script>
 export default {
   methods: {
-    masukUser() {
+    async masukUser() {
       const formLogin = {
         email: this.email,
         password: this.password,
       }
-      this.$axios
-      .post('https://gatelab.thunderlab.id/login', formLogin)
+      await this.$axios
+      .post('login', formLogin)
       .then((res) => {
         console.log(res)
         this.$router.push('/beranda')
